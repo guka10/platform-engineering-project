@@ -24,6 +24,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./devops-learning-docker
+          file: ./devops-learning-docker/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/dockeractions:latest
+
